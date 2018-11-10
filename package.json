@@ -1,9 +1,11 @@
 {
   "name": "laya_texture_packer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An node version texturePacker base on codes in Egret Wing 3's res modle plugin.",
-  "bin": {"laya_texture_packer":"./cli.js"},
-  "index":"./dist/Main.js",
+  "bin": {
+    "laya_texture_packer": "./cli.js"
+  },
+  "index": "./dist/Main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node ./dist/Main.js"
