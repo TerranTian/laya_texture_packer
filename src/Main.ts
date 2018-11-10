@@ -24,8 +24,8 @@ import { LayaAtlas } from "./exporter/LayaAtlas";
 
 class Main{
     constructor(){
-        // let dir = process.argv[2]||".";
-        let dir = "/Users/terrantian/Documents/hole_workspace/hole_client/laya_hole/laya/assets/scene";
+        let dir = process.argv[2]||".";
+        // let dir = "/Users/terrantian/Documents/hole_workspace/hole_client/laya_hole/laya/assets/scene";
         if(!path.isAbsolute(dir)){
             dir = path.resolve(process.cwd(),dir);
         }
