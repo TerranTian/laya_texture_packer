@@ -35,7 +35,7 @@ export class LayaAtlas extends BaseExporter{
             }
         }
         let meta = {
-            image:imageNames.join(","),
+            image:imageNames.map(v=>v+".png").join(","),
             prefix:`${dirName}/`
         }
 
