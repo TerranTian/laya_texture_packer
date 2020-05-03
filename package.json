@@ -9,7 +9,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node ./dist/Main.js",
-    "prepare": "tsc && npm version patch "
+    "prepare": "tsc && npm version patch && git push"
   },
   "author": "terran.tian",
   "license": "ISC",
