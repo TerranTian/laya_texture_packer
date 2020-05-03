@@ -1,6 +1,6 @@
 {
   "name": "laya_texture_packer",
-  "version": "1.0.1",
+  "version": "2.0.1",
   "description": "An node version texturePacker base on codes in Egret Wing 3's res modle plugin.",
   "bin": {
     "laya_texture_packer": "./cli.js"
@@ -8,13 +8,19 @@
   "index": "./dist/Main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node ./dist/Main.js"
+    "start": "node ./dist/Main.js",
+    "prepublish": "tsc && git add . && git commit -m \"publish\" && git push && npm version patch"
   },
   "author": "terran.tian",
   "license": "ISC",
   "dependencies": {
-    "@types/node": "^9.3.0",
-    "canvas": "^1.6.9",
+    "@types/node": "^9.6.55",
+    "canvas": "^2.6.1",
+    "i": "^0.3.6",
+    "npm": "^6.14.4",
     "probe-image-size": "^3.2.0"
-  }
+  },
+  "files": [
+    "dist"
+  ]
 }
