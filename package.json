@@ -1,6 +1,6 @@
 {
   "name": "laya_texture_packer",
-  "version": "2.0.5",
+  "version": "2.0.6",
   "description": "An node version texturePacker base on codes in Egret Wing 3's res modle plugin.",
   "bin": {
     "laya_texture_packer": "./cli.js"
