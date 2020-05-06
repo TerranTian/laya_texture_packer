@@ -1,8 +1,9 @@
-const Canvas = require('canvas')
+// const Canvas = require('canvas')
+const { createCanvas, Image } = require('canvas')
 global["document"] = {};
 document.createElement = (name)=>{
-    if(name == "canvas")return new Canvas();
-    if(name == "img")return new Canvas.Image();
+    if(name == "canvas")return createCanvas(1,1);
+    if(name == "img")return new Image();
 
     return null;
 };
