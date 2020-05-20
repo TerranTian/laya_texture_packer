@@ -1,6 +1,6 @@
 {
   "name": "laya_texture_packer",
-  "version": "2.0.17",
+  "version": "2.0.18",
   "description": "An node version texturePacker for laya.",
   "bin": {
     "laya_texture_packer": "./cli.js"
