@@ -475,5 +475,3 @@ export class MaxRectsUtil {
 
     private _result: MaxRectangle[];
 }
-
-export const maxRectsUtil = new MaxRectsUtil();

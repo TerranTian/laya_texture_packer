@@ -20,8 +20,8 @@ import * as fs from "fs";
 import { MaxRectangle } from "./core/MaxRectsCore";
 import { PackGroup, ImageItem, Rectangle,} from "./core/ValueObjects";
 import * as util from "./core/util"
-import { maxRectsUtil } from "./core/MaxRectsUtil";
 import { LayaAtlas } from "./exporter/LayaAtlas";
+import { MaxRectsUtil } from "./core/MaxRectsUtil";
 
 class Main{
     constructor(){
@@ -59,14 +59,14 @@ class Main{
         }
 
         let groups:PackGroup[] = []
-        let results = maxRectsUtil.packImages(rects, 1024, 1024, 2);
-        // let results = maxRectsUtil.packImages(rects, 512, 512, 1);
-        // if(results.length > 1){
-        //     results = maxRectsUtil.packImages(rects, 1024, 1024, 1);
-        // }
-        // if(results.length > 1){
-        //     results = maxRectsUtil.packImages(rects, 2048, 2048, 1);
-        // }
+        
+        let results = new MaxRectsUtil().packImages(rects, 512, 512, 1);
+        if(results.length > 1){
+            results = new MaxRectsUtil().packImages(rects, 1024, 1024, 1);
+        }
+        if(results.length > 1){
+            results = new MaxRectsUtil().packImages(rects, 2048, 2048, 1);
+        }
         for (let result of results) {
             let group = new PackGroup();
             group.width = result.maxWidth;
