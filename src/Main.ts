@@ -59,14 +59,14 @@ class Main{
         }
 
         let groups:PackGroup[] = []
-        
-        let results = maxRectsUtil.packImages(rects, 512, 512, 1);
-        if(results.length > 1){
-            results = maxRectsUtil.packImages(rects, 1024, 1024, 1);
-        }
-        if(results.length > 1){
-            results = maxRectsUtil.packImages(rects, 2048, 2048, 1);
-        }
+        let results = maxRectsUtil.packImages(rects, 1024, 1024, 2);
+        // let results = maxRectsUtil.packImages(rects, 512, 512, 1);
+        // if(results.length > 1){
+        //     results = maxRectsUtil.packImages(rects, 1024, 1024, 1);
+        // }
+        // if(results.length > 1){
+        //     results = maxRectsUtil.packImages(rects, 2048, 2048, 1);
+        // }
         for (let result of results) {
             let group = new PackGroup();
             group.width = result.maxWidth;
