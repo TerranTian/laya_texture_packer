@@ -35,7 +35,7 @@ export enum MaxRectsResultType {
  */
 export class MaxRectsUtil {
     packImages(rectangles:MaxRectangle[], imageWidth:number, imageHeight:number, gap=2):{maxWidth:number,maxHeight:number,imageGroups:MaxRectangle[]}[]{
-        rectangles.sort((a, b)=>a.area > b.area? -1 : a.area == b.area?0:1)
+        rectangles.sort((a, b)=>b.area - a.area)
         var results = [];
         var imageRectCores:MaxRectsCore[] = [];
 

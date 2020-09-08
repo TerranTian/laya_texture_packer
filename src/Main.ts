@@ -60,7 +60,7 @@ class Main{
 
         let groups:PackGroup[] = []
         
-        let results = new MaxRectsUtil().packImages(rects, 2048, 2048, 1);
+        let results = new MaxRectsUtil().packImages(rects, 1024, 1024, 2);
         // if(results.length > 1){
         //     results = new MaxRectsUtil().packImages(rects, 1024, 1024, 1);
         // }
