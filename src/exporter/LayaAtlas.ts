@@ -7,7 +7,7 @@ export class LayaAtlas extends BaseExporter{
     async generate(groups:PackGroup[],opts:{dir:string}){
         let dirName = path.basename(opts.dir);
 
-        let imageNames = groups.map((v,index)=>index>0?`${dirName}_index`:dirName);
+        let imageNames = groups.map((v,index)=>index>0?`${dirName}_${index}`:dirName);
 
         let frames = {};
         for(let i = 0;i<groups.length;i++){
